@@ -4,24 +4,24 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Zhuoheng Han is a Ph.D. student at Peking University studying LLM evaluation, agent reliability, and code intelligence.">
-  <meta name="theme-color" content="#f4f7f6" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#0c1418" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#191a1d" media="(prefers-color-scheme: dark)">
   <meta property="og:title" content="Zhuoheng Han | LLM Evaluation and Agent Reliability">
-  <meta property="og:description" content="Research on reliable language-model evaluation, agent failure diagnosis, and code intelligence.">
+  <meta property="og:description" content="Research on language-model evaluation, agent reliability, code intelligence, and multimodal benchmarks.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hzh030430.github.io/">
+  <meta property="og:image" content="https://hzh030430.github.io/assets/portrait.jpg">
+  <meta property="og:image:alt" content="Zhuoheng Han">
   <meta name="twitter:card" content="summary">
   <link rel="canonical" href="https://hzh030430.github.io/">
   <link rel="icon" href="assets/favicon.png" type="image/png">
-  <link rel="preload" href="assets/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <title>Zhuoheng Han | LLM Evaluation and Agent Reliability</title>
   <script>
     try {
-      const savedTheme = localStorage.getItem("theme");
-      if (savedTheme) document.documentElement.dataset.theme = savedTheme;
+      const theme = localStorage.getItem("theme");
+      if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme;
     } catch (error) {}
-    document.documentElement.classList.add("js");
   </script>
   <script type="application/ld+json">
     {
@@ -30,6 +30,7 @@
       "name": "Zhuoheng Han",
       "alternateName": "韩卓衡",
       "url": "https://hzh030430.github.io/",
+      "image": "https://hzh030430.github.io/assets/portrait.jpg",
       "jobTitle": "Ph.D. Student",
       "affiliation": {
         "@type": "CollegeOrUniversity",
@@ -40,11 +41,7 @@
         "https://github.com/hzh030430",
         "https://openreview.net/profile?id=~Zhuoheng_Han1"
       ],
-      "knowsAbout": [
-        "Large language model evaluation",
-        "Agent reliability",
-        "Code intelligence"
-      ]
+      "knowsAbout": ["Large language model evaluation", "Agent reliability", "Code intelligence", "Multimodal evaluation"]
     }
   </script>
 </head>
@@ -54,182 +51,172 @@
   <header class="site-header">
     <div class="shell header-inner">
       <a class="wordmark" href="#top" aria-label="Zhuoheng Han, home">ZH</a>
-      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <div class="header-controls">
+        <button class="icon-button theme-button" type="button" aria-label="Switch to dark theme" data-tooltip="Switch to dark theme" hidden>
+          <span data-icon="Moon" aria-hidden="true"></span>
+        </button>
+        <button class="icon-button menu-button" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav" data-tooltip="Open navigation" hidden>
+          <span data-icon="Menu" aria-hidden="true"></span>
+        </button>
+      </div>
       <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
         <a href="#research">Research</a>
         <a href="#publications">Publications</a>
         <a href="#background">Background</a>
         <a href="mailto:2501112032@stu.pku.edu.cn">Email</a>
-        <button class="theme-button" type="button" aria-label="Switch color theme">
-          <span>Theme</span>
-          <span class="theme-state" aria-hidden="true">Auto</span>
-        </button>
       </nav>
     </div>
   </header>
 
-  <main id="main">
-    <section class="hero shell" id="top" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="role-line">韩卓衡 / Ph.D. student at Peking University</p>
-        <h1 id="hero-title">Zhuoheng Han</h1>
-        <p class="hero-statement">I study how language models fail under iteration, evaluation, and tool use.</p>
-        <div class="hero-actions" aria-label="Primary links">
-          <a class="button button-primary" href="#publications">Publications</a>
-          <a class="button button-secondary" href="mailto:2501112032@stu.pku.edu.cn">Email</a>
+  <main id="main" class="shell" tabindex="-1">
+    <section class="profile" id="top" aria-labelledby="profile-title">
+      <div class="profile-copy">
+        <h1 id="profile-title">Zhuoheng Han <span lang="zh-CN">韩卓衡</span></h1>
+        <p class="affiliation">Ph.D. student · Peking University</p>
+        <p class="biography">I work with Prof. Houfeng Wang at the Institute of Computational Linguistics, Peking University.</p>
+        <div class="research-focus" id="research">
+          <h2>Research</h2>
+          <p>I study <strong>LLM evaluation and agent reliability</strong>, alongside iterative coding and multimodal benchmarks. My current focus is trace-based diagnosis of long-horizon agent failures.</p>
+        </div>
+        <div class="profile-links" aria-label="Contact and research profiles">
+          <a class="email-link" href="mailto:2501112032@stu.pku.edu.cn"><span data-icon="Mail" aria-hidden="true"></span><span>2501112032@stu.pku.edu.cn</span></a>
+          <a href="https://github.com/hzh030430" target="_blank" rel="noopener noreferrer">GitHub<span data-icon="ArrowUpRight" aria-hidden="true"></span></a>
+          <a href="https://openreview.net/profile?id=~Zhuoheng_Han1" target="_blank" rel="noopener noreferrer">OpenReview<span data-icon="ArrowUpRight" aria-hidden="true"></span></a>
         </div>
       </div>
+      <figure class="portrait">
+        <img src="assets/portrait.jpg" alt="Portrait of Zhuoheng Han" width="1280" height="1707" fetchpriority="high" decoding="async">
+        <figcaption>Beijing, China</figcaption>
+      </figure>
     </section>
 
-    <section class="intro shell" data-reveal aria-labelledby="intro-title">
-      <div>
-        <h2 id="intro-title">I test reliability with trace evidence.</h2>
-      </div>
-      <div class="intro-copy">
-        <p>I am a Ph.D. student in the Institute of Computational Linguistics at Peking University, advised by Prof. Houfeng Wang. My work focuses on reliable language-model evaluation, agent failure diagnosis, and code intelligence.</p>
-        <div class="profile-links" aria-label="Research profiles">
-          <a href="https://github.com/hzh030430" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="https://openreview.net/profile?id=~Zhuoheng_Han1" target="_blank" rel="noreferrer">OpenReview</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="news shell" data-reveal aria-labelledby="news-title">
+    <section class="news section-row" aria-labelledby="news-title">
       <h2 id="news-title">News</h2>
-      <div class="news-list">
-        <article>
-          <time datetime="2026-07">Jul 2026</time>
-          <p>COLM 2026 accepted <a href="https://openreview.net/forum?id=duQd1GOs8U" target="_blank" rel="noreferrer">Fragility Under Pressure</a>.</p>
-        </article>
-        <article>
-          <time datetime="2025-12">Dec 2025</time>
-          <p>NeurIPS 2025 selected <a href="https://tttiantt.github.io/Sheetpedia/" target="_blank" rel="noreferrer">Sheetpedia</a> for a Datasets &amp; Benchmarks Spotlight.</p>
-        </article>
-        <article>
-          <time datetime="2025-09">Sep 2025</time>
-          <p>I began my Ph.D. in Natural Language Processing at Peking University.</p>
-        </article>
-      </div>
+      <ul class="news-list">
+        <li><time datetime="2026">2026</time><p><a href="https://arxiv.org/abs/2508.06225" target="_blank" rel="noopener noreferrer">Overconfidence in LLM-as-a-Judge</a> published at <strong>NLPCC 2026</strong>.</p></li>
+        <li><time datetime="2026-07">Jul 2026</time><p><a href="https://openreview.net/forum?id=duQd1GOs8U" target="_blank" rel="noopener noreferrer">Fragility Under Pressure</a> accepted to <strong>COLM 2026</strong>.</p></li>
+        <li><time datetime="2025-12">Dec 2025</time><p><a href="https://tttiantt.github.io/Sheetpedia/" target="_blank" rel="noopener noreferrer">Sheetpedia</a> at <strong>NeurIPS 2025</strong>, Datasets &amp; Benchmarks <span class="spotlight">Spotlight</span>.</p></li>
+      </ul>
     </section>
 
-    <section class="research shell" id="research" data-reveal aria-labelledby="research-title">
+    <section class="ongoing-work section-row" id="work-in-progress" aria-labelledby="work-in-progress-title">
+      <h2 id="work-in-progress-title">Work in progress</h2>
+      <article class="research-project" aria-labelledby="out-of-step-title">
+        <div class="paper-meta"><span class="venue">Under review</span><span>First author</span></div>
+        <h3 id="out-of-step-title">Out of Step with Evidence</h3>
+        <p>I study when tool-using agents report task progress that is not supported by the available evidence. I develop trace-based methods to diagnose mismatches between observations, actions, and completion claims, and to distinguish these from tool or execution-environment failures.</p>
+        <p class="role-note">I lead the research design, implementation, experiments, analysis, and writing.</p>
+      </article>
+    </section>
+
+    <section class="publications section" id="publications" aria-labelledby="publications-title">
       <div class="section-heading">
-        <p class="section-label">Current research</p>
-        <h2 id="research-title">Tracing how agents fail</h2>
-        <p>I study long-horizon tool-using agents as they carry state across tasks, act through external tools, and report completion.</p>
-      </div>
-
-      <div class="research-panel">
-        <div class="research-copy">
-          <p>The project maps mismatches between task state, external actions, and claimed completion. I am building trace-based diagnosis and audit procedures that separate tool-chain faults from failures inside the agent.</p>
-          <div class="research-questions">
-            <p>How does an agent lose or overwrite task state?</p>
-            <p>Which trace evidence supports a failure diagnosis?</p>
-          </div>
-          <p class="research-scope">Study environments include CLAW, TerminalBench, AppWorld, tau2-bench, SWE-multilingual, and DeepSWE.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="publications shell" id="publications" data-reveal aria-labelledby="publications-title">
-      <div class="section-heading section-heading-compact">
         <h2 id="publications-title">Selected publications</h2>
-        <p>I work on model stability and evaluation. Sheetpedia extends that work to spreadsheet intelligence.</p>
+        <p class="section-note">* Equal contribution</p>
       </div>
-
       <div class="paper-list">
-        <article class="paper paper-featured">
-          <div class="paper-meta">
-            <span>COLM 2026</span>
-            <span>First author</span>
-          </div>
-          <h3>Fragility Under Pressure: Evaluating the Iterative Stability of LLMs in Constrained Interactive Coding</h3>
-          <p class="authors"><strong>Zhuoheng Han</strong>, Jin-Ge Yao, Zailong Tian, Xi Yang, Houfeng Wang</p>
-          <p class="paper-summary">We introduce STRIDE to test whether coding agents preserve instructions and functionality through repeated edit-verify-debug cycles.</p>
-          <div class="paper-links">
-            <a href="https://openreview.net/forum?id=duQd1GOs8U" target="_blank" rel="noreferrer">Paper</a>
-            <a href="https://colmweb.org/AcceptedPapers.html" target="_blank" rel="noreferrer">COLM</a>
+        <article class="paper" aria-labelledby="paper-stride">
+          <div class="paper-year">2026</div>
+          <div class="paper-content">
+            <div class="paper-meta"><span class="venue">COLM 2026</span><span>First author</span></div>
+            <h3 id="paper-stride"><a href="https://openreview.net/forum?id=duQd1GOs8U" target="_blank" rel="noopener noreferrer">Fragility Under Pressure: Evaluating the Iterative Stability of LLMs in Constrained Interactive Coding</a></h3>
+            <p class="authors"><strong>Zhuoheng Han</strong>, Jin-Ge Yao, Zailong Tian, Xi Yang, Houfeng Wang</p>
+            <p class="paper-summary">STRIDE evaluates whether LLMs preserve instructions and functionality through repeated edit, verify, and debug cycles, rather than only on their first attempt.</p>
+            <div class="paper-links"><a href="https://openreview.net/forum?id=duQd1GOs8U" target="_blank" rel="noopener noreferrer">Paper<span data-icon="ArrowUpRight" aria-hidden="true"></span></a></div>
+            <details class="contribution">
+              <summary>My contribution<span data-icon="ChevronDown" aria-hidden="true"></span></summary>
+              <p>I led the benchmark design, data construction, evaluation implementation, experiments, analysis, and paper writing.</p>
+            </details>
           </div>
         </article>
 
-        <article class="paper paper-with-visual">
-          <img src="assets/sheetpedia-data-sample.webp" alt="Examples from the Sheetpedia spreadsheet corpus" width="1400" height="696" loading="lazy">
-          <div>
-            <div class="paper-meta">
-              <span>NeurIPS 2025 D&amp;B Spotlight</span>
-              <span>Second author</span>
-            </div>
-            <h3>Sheetpedia: A 300K-Spreadsheet Corpus for Spreadsheet Intelligence and LLM Fine-Tuning</h3>
+        <article class="paper" aria-labelledby="paper-judge">
+          <div class="paper-year">2026</div>
+          <div class="paper-content">
+            <div class="paper-meta"><span class="venue">NLPCC 2026</span><span>Co-first author</span></div>
+            <h3 id="paper-judge"><a href="https://arxiv.org/abs/2508.06225" target="_blank" rel="noopener noreferrer">Overconfidence in LLM-as-a-Judge: Diagnosis and Confidence-Driven Solution</a></h3>
+            <p class="authors">Zailong Tian*, <strong>Zhuoheng Han*</strong>, Yanzhe Chen, Haozhe Xu, Xi Yang, Richeng Xuan, Houfeng Wang, Lizi Liao</p>
+            <p class="paper-summary">TH-Score measures the mismatch between a judge's confidence and accuracy. LLM-as-a-Fuser combines judgments using their confidence signals.</p>
+            <div class="paper-links"><a href="https://arxiv.org/abs/2508.06225" target="_blank" rel="noopener noreferrer">Paper<span data-icon="ArrowUpRight" aria-hidden="true"></span></a></div>
+            <details class="contribution">
+              <summary>My contribution<span data-icon="ChevronDown" aria-hidden="true"></span></summary>
+              <p>I co-designed the evaluation methodology and conducted experiments on confidence estimation and confidence-aware judgment fusion.</p>
+            </details>
+          </div>
+        </article>
+
+        <article class="paper" aria-labelledby="paper-sheetpedia">
+          <div class="paper-year">2025</div>
+          <div class="paper-content">
+            <div class="paper-meta"><span class="venue">NeurIPS 2025 · D&amp;B</span><span class="spotlight">Spotlight</span><span>Second author</span></div>
+            <h3 id="paper-sheetpedia"><a href="https://openreview.net/forum?id=4vLYwlA3X5" target="_blank" rel="noopener noreferrer">Sheetpedia: A 300K-Spreadsheet Corpus for Spreadsheet Intelligence and LLM Fine-Tuning</a></h3>
             <p class="authors">Zailong Tian, <strong>Zhuoheng Han</strong>, Houfeng Wang, Lizi Liao</p>
-            <p class="paper-summary">We build a corpus of more than 290,000 real-world spreadsheets and two benchmarks for semantic-range understanding and formula generation.</p>
-            <div class="paper-links">
-              <a href="https://openreview.net/forum?id=4vLYwlA3X5" target="_blank" rel="noreferrer">Paper</a>
-              <a href="https://tttiantt.github.io/Sheetpedia/" target="_blank" rel="noreferrer">Project</a>
+            <div class="paper-visual-summary">
+              <div>
+                <p class="paper-summary">A corpus of more than 290,000 real-world spreadsheets, with benchmarks for semantic-range understanding and formula generation.</p>
+                <div class="paper-links">
+                  <a href="https://openreview.net/forum?id=4vLYwlA3X5" target="_blank" rel="noopener noreferrer">Paper<span data-icon="ArrowUpRight" aria-hidden="true"></span></a>
+                  <a href="https://tttiantt.github.io/Sheetpedia/" target="_blank" rel="noopener noreferrer">Project<span data-icon="ArrowUpRight" aria-hidden="true"></span></a>
+                </div>
+              </div>
+              <a class="paper-figure" href="https://tttiantt.github.io/Sheetpedia/" target="_blank" rel="noopener noreferrer" aria-label="Sheetpedia project, with examples from the spreadsheet corpus">
+                <img src="assets/sheetpedia-data-sample.webp" alt="Examples of real-world spreadsheets in the Sheetpedia corpus" width="1400" height="696" loading="lazy" decoding="async">
+              </a>
             </div>
+            <details class="contribution">
+              <summary>My contribution<span data-icon="ChevronDown" aria-hidden="true"></span></summary>
+              <p>I worked on data cleaning and standardization, language and quality filtering, and LSH-based deduplication. I also contributed to fine-tuning experiments, analysis, and writing.</p>
+            </details>
           </div>
-        </article>
-
-        <article class="paper">
-          <div class="paper-meta">
-            <span>arXiv 2025</span>
-            <span>Co-first author</span>
-          </div>
-          <h3>Overconfidence in LLM-as-a-Judge: Diagnosis and Confidence-Driven Solution</h3>
-          <p class="authors">Zailong Tian*, <strong>Zhuoheng Han*</strong>, Yanzhe Chen, Haozhe Xu, Xi Yang, Richeng Xuan, Houfeng Wang, Lizi Liao</p>
-          <p class="paper-summary">We measure confidence-accuracy mismatch with TH-Score and combine model judgments through LLM-as-a-Fuser.</p>
-          <div class="paper-links">
-            <a href="https://arxiv.org/abs/2508.06225" target="_blank" rel="noreferrer">Paper</a>
-          </div>
-          <p class="contribution-note">* Equal contribution</p>
         </article>
       </div>
     </section>
 
-    <section class="background shell" id="background" data-reveal aria-labelledby="background-title">
-      <div class="section-heading section-heading-compact">
-        <h2 id="background-title">Background</h2>
-      </div>
+    <section class="dataset-work section-row" aria-labelledby="dataset-title">
+      <h2 id="dataset-title">Dataset work</h2>
+      <article class="dataset-project">
+        <div class="paper-meta"><span class="venue">BAAI FlagEval · 2025</span><span>Co-first author</span></div>
+        <h3><a href="https://flageval-baai.github.io/TRUE/" target="_blank" rel="noopener noreferrer">TRUE: text recognition and understanding in vision-language models</a></h3>
+        <p>A benchmark that examines whether vision-language models understand the text they recognize. I contributed to scene-text data collection, the annotation workflow, and English question-answer construction.</p>
+        <div class="paper-links"><a href="https://flageval-baai.github.io/TRUE/" target="_blank" rel="noopener noreferrer">Project<span data-icon="ArrowUpRight" aria-hidden="true"></span></a></div>
+      </article>
+    </section>
+
+    <section class="background section" id="background" aria-labelledby="background-title">
+      <div class="section-heading"><h2 id="background-title">Background</h2></div>
       <div class="background-grid">
         <div class="timeline-block">
           <h3>Education</h3>
           <article>
-            <time>2025-Present</time>
+            <time>Sep 2025 - Present</time>
             <h4>Peking University</h4>
-            <p>Ph.D. student in Natural Language Processing, Institute of Computational Linguistics</p>
+            <p>Ph.D. student in Natural Language Processing<br>Institute of Computational Linguistics</p>
+            <p class="detail-line">Advisor: Prof. Houfeng Wang</p>
           </article>
           <article>
-            <time>2021-2025</time>
+            <time>Sep 2021 - Jul 2025</time>
             <h4>Peking University</h4>
-            <p>B.S. in Computer Science and Technology, Yuanpei College</p>
+            <p>B.S. in Computer Science and Technology<br>Yuanpei College</p>
           </article>
         </div>
-
         <div class="timeline-block">
           <h3>Experience</h3>
           <article>
-            <time>2024.10-2025.06</time>
-            <h4>BAAI FlagEval</h4>
-            <p>Research intern working on VLM text recognition and understanding benchmarks. I also helped build the TRUE dataset and its annotation workflow.</p>
+            <time>Oct 2024 - Jun 2025</time>
+            <h4>Beijing Academy of Artificial Intelligence</h4>
+            <p>Research intern · FlagEval</p>
+            <p class="experience-summary">Worked on evaluation datasets for vision-language models, focusing on text recognition, text understanding, and annotation quality.</p>
           </article>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="shell footer-inner">
-      <div>
-        <p class="footer-heading">Contact me about LLM evaluation or agent reliability.</p>
-      </div>
-      <div class="footer-links">
-        <a href="mailto:2501112032@stu.pku.edu.cn">Email</a>
-        <a href="https://github.com/hzh030430" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="https://openreview.net/profile?id=~Zhuoheng_Han1" target="_blank" rel="noreferrer">OpenReview</a>
-      </div>
-      <p class="copyright">© 2026 Zhuoheng Han</p>
-    </div>
+  <footer class="site-footer shell">
+    <p>© 2026 Zhuoheng Han <span class="footer-separator">·</span> Updated October 2026</p>
+    <a class="icon-button back-to-top" href="#top" aria-label="Back to top" data-tooltip="Back to top"><span data-icon="ArrowUp" aria-hidden="true"></span><span class="back-to-top-label">Top</span></a>
   </footer>
-
+  <script src="assets/lucide-icons.js" defer></script>
   <script src="script.js" defer></script>
 </body>
 </html>
