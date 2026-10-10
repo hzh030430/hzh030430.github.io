@@ -135,6 +135,7 @@ svg { display: block; width: 18px; height: 18px; flex-shrink: 0; }
 .dataset-project h3, .research-project h3 { font-size: 19px; line-height: 1.45; }
 .dataset-project > p, .research-project > p { margin-top: 12px; font-size: 14px; }
 .research-project .role-note { color: var(--muted); font-size: 13px; }
+.research-project + .research-project { margin-top: 26px; padding-top: 26px; border-top: 1px solid var(--line); }
 
 .background { padding-bottom: 40px; }
 .background-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 60px; margin-top: 27px; }

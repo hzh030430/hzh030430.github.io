@@ -76,7 +76,7 @@
         <p class="biography">I work with Prof. Houfeng Wang at the Institute of Computational Linguistics, Peking University.</p>
         <div class="research-focus" id="research">
           <h2>Research</h2>
-          <p>I study <strong>LLM evaluation and agent reliability</strong>, alongside iterative coding and multimodal benchmarks. My current focus is trace-based diagnosis of long-horizon agent failures.</p>
+          <p>I study <strong>LLM evaluation and agent reliability</strong>, alongside iterative coding and multimodal benchmarks. My current focus is trace-based diagnosis of long-horizon agent failures. I also collaborate on post-training refinement of LoRA adapters.</p>
         </div>
         <div class="profile-links" aria-label="Contact and research profiles">
           <a class="email-link" href="mailto:2501112032@stu.pku.edu.cn"><span data-icon="Mail" aria-hidden="true"></span><span>2501112032@stu.pku.edu.cn</span></a>
@@ -101,12 +101,20 @@
 
     <section class="ongoing-work section-row" id="work-in-progress" aria-labelledby="work-in-progress-title">
       <h2 id="work-in-progress-title">Work in progress</h2>
-      <article class="research-project" aria-labelledby="out-of-step-title">
-        <div class="paper-meta"><span class="venue">Under review</span><span>First author</span></div>
-        <h3 id="out-of-step-title">Out of Step with Evidence</h3>
-        <p>I study when tool-using agents report task progress that is not supported by the available evidence. I develop trace-based methods to diagnose mismatches between observations, actions, and completion claims, and to distinguish these from tool or execution-environment failures.</p>
-        <p class="role-note">I lead the research design, implementation, experiments, analysis, and writing.</p>
-      </article>
+      <div class="research-project-list">
+        <article class="research-project" aria-labelledby="out-of-step-title">
+          <div class="paper-meta"><span class="venue">Under review</span><span>First author</span></div>
+          <h3 id="out-of-step-title">Out of Step with Evidence</h3>
+          <p>I study when tool-using agents report task progress that is not supported by the available evidence. I develop trace-based methods to diagnose mismatches between observations, actions, and completion claims, and to distinguish these from tool or execution-environment failures.</p>
+          <p class="role-note">I lead the research design, implementation, experiments, analysis, and writing.</p>
+        </article>
+        <article class="research-project" aria-labelledby="lora-norm-title">
+          <div class="paper-meta"><span class="venue">Under review</span><span>Third author</span></div>
+          <h3 id="lora-norm-title">Learn the Directions, Normalize the Gains</h3>
+          <p>I collaborate on post-training refinement of LoRA adapters, studying how redistributing adaptation gains affects task specialization and the retention of broader capabilities.</p>
+          <p class="role-note">My contribution focuses on running a subset of the experiments.</p>
+        </article>
+      </div>
     </section>
 
     <section class="publications section" id="publications" aria-labelledby="publications-title">
@@ -136,8 +144,8 @@
             <div class="paper-meta"><span class="venue">NLPCC 2026</span><span>Co-first author</span></div>
             <h3 id="paper-judge"><a href="https://arxiv.org/abs/2508.06225" target="_blank" rel="noopener noreferrer">Overconfidence in LLM-as-a-Judge: Diagnosis and Confidence-Driven Solution</a></h3>
             <p class="authors">Zailong Tian*, <strong>Zhuoheng Han*</strong>, Yanzhe Chen, Haozhe Xu, Xi Yang, Richeng Xuan, Houfeng Wang, Lizi Liao</p>
-            <p class="paper-summary">TH-Score measures the mismatch between a judge's confidence and accuracy. LLM-as-a-Fuser combines judgments using their confidence signals.</p>
-            <div class="paper-links"><a href="https://arxiv.org/abs/2508.06225" target="_blank" rel="noopener noreferrer">Paper<span data-icon="ArrowUpRight" aria-hidden="true"></span></a></div>
+            <p class="paper-summary">A study of nine LLM judges distinguishes confidence calibration from its usefulness for ranking judgments. LLM-as-a-Fuser combines decisions, rationales, and confidence signals.</p>
+            <div class="paper-links"><a href="https://arxiv.org/abs/2508.06225" target="_blank" rel="noopener noreferrer">Earlier preprint<span data-icon="ArrowUpRight" aria-hidden="true"></span></a></div>
             <details class="contribution">
               <summary>My contribution<span data-icon="ChevronDown" aria-hidden="true"></span></summary>
               <p>I co-designed the evaluation methodology and conducted experiments on confidence estimation and confidence-aware judgment fusion.</p>
